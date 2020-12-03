@@ -5,20 +5,19 @@ pipeline {
       steps {
         echo 'build stage'
       }
-    }
-
-    stage('warning-check') {
-      steps {
-        echo 'warning-check'
+      stages {
+        stage('warning-check') {
+          steps {
+            echo 'warning-check'
+          }
+        }
+        stage('upload') {
+          steps {
+            echo 'upload'
+          }
+        }
       }
     }
-
-    stage('upload') {
-      steps {
-        echo 'upload'
-      }
-    }
-
     stage('validator') {
       steps {
         echo 'validator'
