@@ -17,7 +17,11 @@ pipeline {
 
         stage('warning-check') {
           steps {
-            sh 'false'
+            script {
+              catchError(buildResult: 'FAILURE', stageResult: 'FAILURE') {
+                sh 'false'
+              }
+            }
             emailext(subject: 'Warning-check', body: 'warning-check passed', from: 'sandhaysimran@gmail.com', to: 'sandhaysimran@gmail.com')
           }
         }
