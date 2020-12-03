@@ -23,7 +23,7 @@ pipeline {
               }
             }
 
-            emailext(subject: 'Warning-check', body: 'warning-check passed', from: 'sandhaysimran@gmail.com', to: 'sandhaysimran@gmail.com')
+            emailext(subject: 'Warning-check', body: 'warning-check passed', from: 'sandhaysimran@gmail.com', to: 'sandhaysimran@gmail.com', attachmentsPattern: '*.html')
           }
         }
 
