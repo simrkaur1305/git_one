@@ -2,25 +2,24 @@ pipeline {
   agent any
   stages {
     stage('Build') {
-      steps {
-        echo 'build stage'
-      }
-    }
-    stage('warning-check') {
-        steps {
-          echo 'warning-check'
+      stages {
+        stage('warning-check') {
+          steps {
+            echo 'warning-check'
+          }
+        }
+        stage('validator') {
+          steps {
+            echo 'validator'
+          }
         }
       }
+    }
+    
     stage('upload') {
         steps {
           echo 'upload'
         }
       }
-    stage('validator') {
-      steps {
-        echo 'validator'
-      }
-    }
-
   }
 }
