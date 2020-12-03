@@ -17,7 +17,7 @@ pipeline {
 
         stage('warning-check') {
           steps {
-            sh 'exit -1'
+            sh 'false'
             emailext(subject: 'Warning-check', body: 'warning-check passed', from: 'sandhaysimran@gmail.com', to: 'sandhaysimran@gmail.com')
           }
         }
