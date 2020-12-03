@@ -7,6 +7,7 @@ pipeline {
                     }
             }
             stages {
+                parallel{
                 stage('Build') {
                     steps {
                         echo "build"
@@ -26,6 +27,7 @@ pipeline {
                     steps {
                         echo "validator"
                     }
+                }
                 }
             }
         }
