@@ -5,16 +5,14 @@ pipeline {
       steps {
         echo 'build stage'
       }
-      stages {
-        stage('warning-check') {
-          steps {
-            echo 'warning-check'
-          }
+      stage('warning-check') {
+        steps {
+          echo 'warning-check'
         }
-        stage('upload') {
-          steps {
-            echo 'upload'
-          }
+      }
+      stage('upload') {
+        steps {
+          echo 'upload'
         }
       }
     }
