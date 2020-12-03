@@ -22,6 +22,7 @@ pipeline {
                 sh 'false'
               }
             }
+
             emailext(subject: 'Warning-check', body: 'warning-check passed', from: 'sandhaysimran@gmail.com', to: 'sandhaysimran@gmail.com')
           }
         }
